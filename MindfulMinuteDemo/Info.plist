@@ -25,9 +25,14 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
+    <array>
+        <string>armv7</string>
+        <string>healthkit</string>
+    </array>
+    <key>NSHealthShareUsageDescription</key>
+    <string>I would like to access your Mindful Sessions for demoing to readers</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>I would like to update your Mindful Sessions for demoing to readers</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

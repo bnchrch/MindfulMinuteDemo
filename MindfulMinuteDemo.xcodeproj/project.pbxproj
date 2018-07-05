@@ -14,6 +14,7 @@
 		D174EA0F20EE172D00953F9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D174EA0D20EE172D00953F9E /* LaunchScreen.storyboard */; };
 		D174EA1A20EE172D00953F9E /* MindfulMinuteDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174EA1920EE172D00953F9E /* MindfulMinuteDemoTests.swift */; };
 		D174EA2520EE172D00953F9E /* MindfulMinuteDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174EA2420EE172D00953F9E /* MindfulMinuteDemoUITests.swift */; };
+		D174EA3420EE1AC300953F9E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D174EA3320EE1AC300953F9E /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		D174EA2020EE172D00953F9E /* MindfulMinuteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindfulMinuteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D174EA2420EE172D00953F9E /* MindfulMinuteDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulMinuteDemoUITests.swift; sourceTree = "<group>"; };
 		D174EA2620EE172D00953F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D174EA3320EE1AC300953F9E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D174EA3520EE1AC300953F9E /* MindfulMinuteDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindfulMinuteDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D174EA3420EE1AC300953F9E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 				D174EA1820EE172D00953F9E /* MindfulMinuteDemoTests */,
 				D174EA2320EE172D00953F9E /* MindfulMinuteDemoUITests */,
 				D174EA0220EE172C00953F9E /* Products */,
+				D174EA3220EE1AC300953F9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +102,7 @@
 		D174EA0320EE172C00953F9E /* MindfulMinuteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D174EA3520EE1AC300953F9E /* MindfulMinuteDemo.entitlements */,
 				D174EA0420EE172C00953F9E /* AppDelegate.swift */,
 				D174EA0620EE172C00953F9E /* ViewController.swift */,
 				D174EA0820EE172C00953F9E /* Main.storyboard */,
@@ -123,6 +129,14 @@
 				D174EA2620EE172D00953F9E /* Info.plist */,
 			);
 			path = MindfulMinuteDemoUITests;
+			sourceTree = "<group>";
+		};
+		D174EA3220EE1AC300953F9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D174EA3320EE1AC300953F9E /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,11 @@
 				TargetAttributes = {
 					D174EA0020EE172C00953F9E = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					D174EA1420EE172D00953F9E = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -430,7 +449,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MindfulMinuteDemo/MindfulMinuteDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UL3SJWXF6M;
 				INFOPLIST_FILE = MindfulMinuteDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,7 +468,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MindfulMinuteDemo/MindfulMinuteDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UL3SJWXF6M;
 				INFOPLIST_FILE = MindfulMinuteDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
